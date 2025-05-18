@@ -1,0 +1,107 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.container {
+  display: grid;
+  row-gap: 1px;
+  column-gap: 1px;
+  grid-template-columns: repeat(52, 9px);
+}
+
+h4 {
+  margin: 10px 0;
+}
+
+.date-list-heading{
+  padding: 0 10px;
+  background-color: black;
+  border-radius: 12px;
+}
+
+.box {
+  width: 8px;
+  height: 8px;
+  border: 0.3px solid #ffffff5c;
+  border-radius: 50%;
+}
+
+.box-filled {
+  width: 8px;
+  height: 8px;
+  border: 0.3px solid greenyellow;
+  background-color: greenyellow;
+  border-radius: 50%;
+}
+
+.Visualizer{
+  padding: 0 10px;
+}
+
+.year-row-gap {
+  margin-bottom: 10px;
+}
+
+.choose-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #ffffff25;
+  padding: 10px;
+  border-radius: 12px;
+  height: min-content;
+}
+
+.date-list {
+  padding: 10px;
+  text-align: right;
+  background-color: #ffffff25;
+  border-radius: 12px;
+  height: min-content;
+}
+
+.main-heading {
+  font-size: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .choose-date,
+  .date-list {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .date-list {
+    text-align: left;
+  }
+
+  .container{
+    grid-template-columns: repeat(52, 6px);
+  }
+
+  .box {
+    width: 6px;
+    height: 6px;
+  }
+
+  .box-filled {
+    width: 6px;
+    height: 6px;
+  }
+}
